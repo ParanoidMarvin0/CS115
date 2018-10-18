@@ -2,16 +2,12 @@
 #define __RATIONAL_H__
 
 
-long int resultNum, resultDen;
-
 class Rational
 {
 
  private:
     long int numer, denom;
-
    
-
     public:
 //Rational
 //

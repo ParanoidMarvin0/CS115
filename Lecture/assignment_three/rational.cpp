@@ -20,26 +20,34 @@ Rational::Rational(long int a, long int b)
 
 long int Rational::add (const Rational& a, const Rational& b) const
 {
-    resultNum = a.numer*b.denom + a.denom*b.numer;
-    resultDen = a.denom*b.denom;
+    long int resultNum = a.numer*b.denom + a.denom*b.numer;
+    long int resultDen = a.denom*b.denom;
+
+    return (resultNum, resultDen);
 }
 
 long int Rational::sub (const Rational& a, const Rational& b) const
 {
-    resultNum = a.numer*b.denom - a.denom*b.numer;
-    resultDen = a.denom*b.denom;
+    long int resultNum = a.numer*b.denom - a.denom*b.numer;
+    long int resultDen = a.denom*b.denom;
+
+    return (resultNum, resultDen);
 }
 
 long int Rational::multi(const Rational& a, const Rational& b) const
 {
-    resultNum = a.numer*b.numer;
-    resultDen = a.denom*b.denom;
+    long int resultNum = a.numer*b.numer;
+    long int resultDen = a.denom*b.denom;
+
+    return (resultNum, resultDen);
 }
 
 long int Rational::div(const Rational& a, const Rational& b) const
 {
-    resultNum = a.numer*b.denom;
-    resultDen = a.denom*b.numer;
+    long int resultNum = a.numer*b.denom;
+    long int resultDen = a.denom*b.numer;
+
+    return (resultNum, resultDen);
 }
 
 bool Rational::equal(const Rational& a, const Rational& b) const
@@ -96,5 +104,5 @@ long int Rational::lcm(long int a, long int b)
 
 void Rational::print()
 {
-    cout << numer << "//" << denom << endl;
+    cout << numer << "/" << denom << endl;
 }
