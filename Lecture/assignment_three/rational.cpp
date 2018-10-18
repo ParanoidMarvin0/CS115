@@ -2,6 +2,8 @@
 #include <cassert>
 #include "rational.h"
 
+using namespace std;
+
 
 Rational::Rational()
 {
@@ -64,6 +66,16 @@ bool Rational::less(const Rational& a, const Rational& b) const
 
 long int Rational::getComponents()
 {
+    long int n1, n2;
+    cout << "Enter value for Numerator: ";
+    cin >> n1;
+    cout << "Enter value for Denominator: ";
+    cin >> n2;
+
+
+//put numerator and denominator in normal form;
+
+return(n1, n2);
 
 }
 
@@ -84,5 +96,5 @@ long int Rational::lcm(long int a, long int b)
 
 void Rational::print()
 {
-
+    cout << numer << "//" << denom << endl;
 }
