@@ -3,10 +3,20 @@
 
 using namespace std;
 
+long int H()
+{
+
+}
+
+long int S()
+{
+
+}
+
 int main(){
 
 
-Rational r1(3,4);
+Rational r1;
 Rational r2(1,3);
 Rational r3(-1,-3);
 

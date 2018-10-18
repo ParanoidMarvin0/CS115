@@ -5,9 +5,60 @@
 class Rational
 {
 
- private:
-    long int numer, denom;
+private:
+long int numer, denom; //class values for numerator and denominator
+
+// getComponents
+//
+// Purpose: Convert Rational to normal form
+// Parameter(s): N/A
+// Precondition: N/A
+// Returns:
+// Side Effect: use gcd() to convert 
+//
+
+void getComponents(long int& a, long int& b);
+    
+
+//GCD
+//
+// Purpose: using Euclidean algorithym to calculate greatest common denominator
+// Parameter(s):
+// <1> Numerator: rational value numerator
+// <2> Denominator: rational value denominator
+// Precondition: N/A
+// Returns: 
+// a: greatest common denominator
+// Side Effect: N/A
+//
+
+long int gcd(long int a, long int b);
+
+//LCM
+//
+// Purpose: Calculate lowest common multiple
+// Parameter(s): 
+// <1> Numerator
+// <2> Denominator
+// Precondition: N/A
+// Returns: lowest common multiple
+// Side Effect: 
+//
+
+    long int lcm(long int a, long int b);
    
+// posNeg
+//
+// Purpose: check int for positve or negative value
+// Parameter(s):
+// a: any integer
+// Precondition: N/A
+// Returns: True if integer is positive, False if negative
+// Side Effect: N/A
+//
+
+bool posNeg(const long int& a) const;
+
     public:
 //Rational
 //
@@ -35,8 +86,8 @@ Rational(long int a, long int b);
 //
 // Purpose: Add one instance of Rational to another
 // Parameter(s): 
-// <1> Rational instance of numerator 
-// <2> Rational instance of denominator
+// <1> a: long int value representing numerator 
+// <2> b: long int value representing denominator
 // Precondition: 
 //      - denominator != 0
 // Returns: sum of rational
@@ -107,16 +158,6 @@ bool equal(const Rational& a, const Rational& b) const;
 
 bool less(const Rational& a, const Rational& b) const;
 
-// getComponents
-//
-// Purpose: Retrieve a numberator and denominator
-// Parameter(s): N/A
-// Precondition: N/A
-// Returns: Numer and Denom
-// Side Effect: set initial numerator and denominator values.
-//
-
-long int getComponents();
 
 // print
 //
@@ -129,9 +170,6 @@ long int getComponents();
 
 void print();
 
-long int gcd(long int a, long int b);
-
-long int lcm(long int a, long int b);
    
 
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <cstdlib>
 #include "rational.h"
 
 using namespace std;
@@ -14,8 +15,11 @@ Rational::Rational()
 Rational::Rational(long int a, long int b)
 {
     assert(b != 0);
+    
     numer = a;
     denom = b;
+    getComponents(numer, denom);
+
 }
 
 long int Rational::add (const Rational& a, const Rational& b) const
@@ -72,18 +76,14 @@ bool Rational::less(const Rational& a, const Rational& b) const
 
 }
 
-long int Rational::getComponents()
+void Rational::getComponents(long int& a, long int& b)
 {
-    long int n1, n2;
-    cout << "Enter value for Numerator: ";
-    cin >> n1;
-    cout << "Enter value for Denominator: ";
-    cin >> n2;
+    
 
 
 //put numerator and denominator in normal form;
 
-return(n1, n2);
+
 
 }
 
@@ -104,5 +104,48 @@ long int Rational::lcm(long int a, long int b)
 
 void Rational::print()
 {
+    if (numer == 0)
+    {
+        cout << "0" << endl;
+
+    }
+    else if (posNeg(numer) != posNeg (denom))
+    {
+        cout << "-";
+    }
+
+    cout << abs(numer) << endl;
     cout << numer << "/" << denom << endl;
+    cout << abs(denom) << endl;
+
 }
+
+bool Rational::posNeg(const long int& a) const
+{
+    if (a >= 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+// Following the above, let N be the absolute value of the numerator and
+// D be the absolute value of the denominator.
+// If N < D then "N/D" should be printed after the sign (if there is
+// one).
+// If N ≥ D then the following printing procedure is applied.
+// Let Q = N / D and R = N % D.
+// If R = 0, simply print Q after the sign (if there is one).
+// If R > 0 then
+// print "Q+R/D" if a negative sign has NOT been printed
+// print "Q-R/D" if a negative sign has been printed
+// The output does NOT include a newline character.
+// Here are some example output.
+// Numerator Denominator Output
+// 0 1 0
+// 2 3 2/3
+// -2 3 -2/3
+// 3 2 1+1/2
+// -3 2 -1-1/2
+// 6 3 2
+// -6 3 -2
