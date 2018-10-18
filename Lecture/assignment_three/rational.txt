@@ -1,0 +1,126 @@
+/*
+Create a class of Rational Numbers and find the arithmetic operations between two Rational Numbers.
+*/
+
+#include<iostream>
+
+using namespace std;
+
+//Please Comment, share, follow and visit often! :)
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+    int i,n;
+    double answer;
+    cout<<"Enter 'n'\n";
+    cin>>n;
+    answer=0;
+    if(n!=0)
+    {
+         for(i=1;i<=n;i++)
+         {
+            answer = answer + (1.0/i);
+         }
+         cout<<"Answer is "<<answer<<"\n";
+    }
+    else
+    {
+         cout<<"Answer not defined! :(\n";
+    }
+}
+
+class Rational
+{
+            int num, den;
+            public:
+            void read()
+            {
+                        cout<<"Enter Numerator"<<endl;
+                        cin>>num;
+                        cout<<"Enter Denominator"<<endl;
+                        cin>>den;
+            }
+            void add(Rational a, Rational b)
+            {
+                        num = a.num*b.den + a.den*b.num;
+                        den = a.den*b.den;
+                        hcf();
+                        cout<<"Addition Completed"<<endl;
+            }
+            void sub(Rational a, Rational b)
+            {
+                        num = a.num*b.den - a.den*b.num;
+                        den = a.den*b.den;
+                        hcf();
+                        cout<<"Subtraction Completed"<<endl;
+            }
+            void mult(Rational a, Rational b)
+            {
+                        num = a.num*b.num;
+                        den = a.den*b.den;
+                        hcf();
+                        cout<<"Multiplication Completed"<<endl;
+            }
+            void div(Rational a, Rational b)
+            {
+                        num = a.num*b.den;
+                        den = a.den*b.num;
+                        hcf();
+                        cout<<"Division Completed"<<endl;
+            }
+            int hcf()
+            {
+                        int a,b,c;
+                        a = num;
+                        b = den;
+                        do
+                        {
+                                    c = a%b;
+                                    a = b;
+                                    b = c;  
+                        }
+                        while(c != 0);
+                        num = num/a;
+                        den = den/a;
+            }
+            void print()
+            {
+                        cout<<"Result is : "<<num<<"/"<<den<<endl;
+            }
+};
+
+int main()
+{
+            Rational r1,r2,r3;
+            r1.read();
+            r2.read();
+            r3.add(r1,r2);
+            r3.print();
+            r3.sub(r1,r2);
+            r3.print();
+            r3.mult(r1,r2);
+            r3.print();
+            r3.div(r1,r2);
+            r3.print();
+}
+
+/* Output
+Enter Numerator
+4
+Enter Denominator
+3
+Enter Numerator
+7
+Enter Denominator
+6
+Addition Completed
+Result is : 5/2
+Subtraction Completed
+Result is : 1/6
+Multiplication Completed
+Result is : 14/9
+Division Completed
+Result is : 8/7
+
+*/

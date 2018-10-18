@@ -19,7 +19,7 @@ class Rational
 // Parameter(s): N/A
 // Precondition: N/A
 // Returns: 
-// Side Effect: initiates non zero instance using normal form.
+// Side Effect: initiates zero instance using normal form.
 //
 
 Rational();
@@ -46,7 +46,7 @@ Rational(long int a, long int b);
 // Returns: sum of rational
 // Side Effect: N/A
 //
-long int add(Rational a, Rational b) const;
+long int add(const Rational& a, const Rational& b) const;
 
 // subtract
 //
@@ -59,7 +59,7 @@ long int add(Rational a, Rational b) const;
 // Returns: sum of rational
 // Side Effect: N/A
 //
-long int sub(Rational a, Rational b) const;
+long int sub(const Rational& a, const Rational& b) const;
 // multiply
 //
 // Purpose: To muliply one instance of Rational with another
@@ -70,7 +70,7 @@ long int sub(Rational a, Rational b) const;
 // Returns: 
 // Side Effect: N/A
 //
-long int multi(Rational a, Rational b) const;
+long int multi(const Rational& a, const Rational& b) const;
 // divide
 //
 // Purpose: To divate one instance of Rational with another
@@ -82,7 +82,7 @@ long int multi(Rational a, Rational b) const;
 // Returns: 
 // Side Effect: N/A
 //
-long int div(Rational a, Rational b) const; 
+long int div(const Rational& a, const Rational& b) const; 
 // equal
 //
 // Purpose: Test if two instances of Rational are equal
@@ -95,7 +95,7 @@ long int div(Rational a, Rational b) const;
 // Side Effect: N/A
 //
 
-bool equal(Rational a, Rational b) const;
+bool equal(const Rational& a, const Rational& b) const;
 
 // less
 //
@@ -109,7 +109,7 @@ bool equal(Rational a, Rational b) const;
 // Side Effect: N/A
 //
 
-bool less(Rational a, Rational b) const;
+bool less(const Rational& a, const Rational& b) const;
 
 // getComponents
 //
