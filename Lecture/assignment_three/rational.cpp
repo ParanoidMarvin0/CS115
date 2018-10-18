@@ -102,22 +102,24 @@ long int Rational::lcm(long int a, long int b)
     return a * b / gcd(a, b);
 }
 
-void Rational::print()
+void Rational::print(const long int& n, const long int& d) const
 {
+    cout << numer << "   " << denom <<  "    ";
     if (numer == 0)
     {
         cout << "0" << endl;
 
     }
-    else if (posNeg(numer) != posNeg (denom))
+    else
+    {
+    if (posNeg(numer) != posNeg (denom))
     {
         cout << "-";
     }
 
-    cout << abs(numer) << endl;
-    cout << numer << "/" << denom << endl;
-    cout << abs(denom) << endl;
-
+    if ()
+    cout << abs(numer) << "/" << abs(denom) << endl;
+    }
 }
 
 bool Rational::posNeg(const long int& a) const

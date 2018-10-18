@@ -168,7 +168,7 @@ bool less(const Rational& a, const Rational& b) const;
 // Side Effect: N/A
 //
 
-void print();
+void print(const long int& a, const long int& b) const;
 
    
 
