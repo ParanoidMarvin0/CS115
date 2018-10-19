@@ -120,18 +120,33 @@ void Rational::print() const
         cout << "-";
     }
 
-    if (numer > denom)
+    if (numer < denom)
     {
-        cout << abs(numer) << "/" << abs(denom) << endl;
+        cout << abs(numer) << "/" << abs(denom);
     }
     else if (numer >= denom)
     {
-        long int q = numer / denom;
-        long int r = numer % denom;
-
+         long int q = numer / denom;
+         long int r = numer % denom;
+         if (r == 0)
+         {
+         cout << q;
+         }
+         if (r > 0)
+         {
+             if (posNeg(numer) != posNeg (denom))
+             {
+                 cout << q << "-" << r << "/" << denom;             
+            }
+            else
+            {
+                cout << q << r << "/" << denom;
+            }
+         }
     }
     
     }
+    cout << endl;
 }
 
 bool Rational::posNeg(const long int& a) const
