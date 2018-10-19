@@ -18,7 +18,7 @@ Rational::Rational(long int a, long int b)
     
     numer = a;
     denom = b;
-    // getComponents(numer, denom);
+    getComponents(numer, denom);
 
 }
 
@@ -81,8 +81,9 @@ bool Rational::less(const Rational& a, const Rational& b) const
 
 void Rational::getComponents(long int& a, long int& b)
 {
-    
-
+    long int gCommon = gcd(a, b); 
+    a = a/gCommon;
+    b = b/gCommon;
 
 //put numerator and denominator in normal form;
 
@@ -136,11 +137,11 @@ void Rational::print() const
          {
              if (posNeg(numer) != posNeg (denom))
              {
-                 cout << q << "-" << r << "/" << denom;             
+                 cout << abs(q) << "-" << abs(r) << "/" << abs(denom);             
             }
             else
             {
-                cout << q << r << "/" << denom;
+                cout << abs(q) << abs(r) << "/" << abs(denom);
             }
          }
     }
