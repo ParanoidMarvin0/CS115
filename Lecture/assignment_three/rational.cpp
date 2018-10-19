@@ -18,40 +18,43 @@ Rational::Rational(long int a, long int b)
     
     numer = a;
     denom = b;
-    getComponents(numer, denom);
+    // getComponents(numer, denom);
 
 }
 
-long int Rational::add (const Rational& a, const Rational& b) const
+Rational Rational::add (const Rational& a, const Rational& b) const
 {
-    long int resultNum = a.numer*b.denom + a.denom*b.numer;
-    long int resultDen = a.denom*b.denom;
-
-    return (resultNum, resultDen);
+    Rational c;
+    c.numer = a.numer*b.denom + a.denom*b.numer;
+    c.denom = a.denom*b.denom;
+    return c;
 }
 
-long int Rational::sub (const Rational& a, const Rational& b) const
+Rational Rational::sub (const Rational& a, const Rational& b) const
 {
-    long int resultNum = a.numer*b.denom - a.denom*b.numer;
-    long int resultDen = a.denom*b.denom;
+    Rational c;
+    c.numer = a.numer*b.denom - a.denom*b.numer;
+    c.denom = a.denom*b.denom;
 
-    return (resultNum, resultDen);
+    return c;
 }
 
-long int Rational::multi(const Rational& a, const Rational& b) const
+Rational Rational::multi(const Rational& a, const Rational& b) const
 {
-    long int resultNum = a.numer*b.numer;
-    long int resultDen = a.denom*b.denom;
+    Rational c;
+    c.numer = a.numer*b.numer;
+    c.denom = a.denom*b.denom;
 
-    return (resultNum, resultDen);
+    return c;
 }
 
-long int Rational::div(const Rational& a, const Rational& b) const
+Rational Rational::div(const Rational& a, const Rational& b) const
 {
-    long int resultNum = a.numer*b.denom;
-    long int resultDen = a.denom*b.numer;
+    Rational c;
+    c.numer = a.numer*b.denom;
+    c.denom = a.denom*b.numer;
 
-    return (resultNum, resultDen);
+    return c;
 }
 
 bool Rational::equal(const Rational& a, const Rational& b) const
@@ -102,7 +105,7 @@ long int Rational::lcm(long int a, long int b)
     return a * b / gcd(a, b);
 }
 
-void Rational::print(const long int& n, const long int& d) const
+void Rational::print() const
 {
     cout << numer << "   " << denom <<  "    ";
     if (numer == 0)
@@ -117,8 +120,17 @@ void Rational::print(const long int& n, const long int& d) const
         cout << "-";
     }
 
-    if ()
-    cout << abs(numer) << "/" << abs(denom) << endl;
+    if (numer > denom)
+    {
+        cout << abs(numer) << "/" << abs(denom) << endl;
+    }
+    else if (numer >= denom)
+    {
+        long int q = numer / denom;
+        long int r = numer % denom;
+
+    }
+    
     }
 }
 

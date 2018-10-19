@@ -29,7 +29,6 @@ Rational r2(1,3);
 Rational r3(13,-5);
 Rational r4(21, 36);
 
-r1.add()
 
 r1.print();
 r2.print();

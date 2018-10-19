@@ -93,7 +93,7 @@ Rational(long int a, long int b);
 // Returns: sum of rational
 // Side Effect: N/A
 //
-long int add(const Rational& a, const Rational& b) const;
+Rational add(const Rational& a, const Rational& b) const;
 
 // subtract
 //
@@ -106,7 +106,7 @@ long int add(const Rational& a, const Rational& b) const;
 // Returns: sum of rational
 // Side Effect: N/A
 //
-long int sub(const Rational& a, const Rational& b) const;
+Rational sub(const Rational& a, const Rational& b) const;
 // multiply
 //
 // Purpose: To muliply one instance of Rational with another
@@ -117,7 +117,7 @@ long int sub(const Rational& a, const Rational& b) const;
 // Returns: 
 // Side Effect: N/A
 //
-long int multi(const Rational& a, const Rational& b) const;
+Rational multi(const Rational& a, const Rational& b) const;
 // divide
 //
 // Purpose: To divate one instance of Rational with another
@@ -129,7 +129,7 @@ long int multi(const Rational& a, const Rational& b) const;
 // Returns: 
 // Side Effect: N/A
 //
-long int div(const Rational& a, const Rational& b) const; 
+Rational div(const Rational& a, const Rational& b) const; 
 // equal
 //
 // Purpose: Test if two instances of Rational are equal
@@ -168,7 +168,7 @@ bool less(const Rational& a, const Rational& b) const;
 // Side Effect: N/A
 //
 
-void print(const long int& a, const long int& b) const;
+void print() const;
 
    
 
