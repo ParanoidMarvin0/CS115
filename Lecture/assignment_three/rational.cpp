@@ -108,40 +108,43 @@ long int Rational::lcm(long int a, long int b)
 
 void Rational::print() const
 {
-    cout << numer << "   " << denom <<  "    ";
-    if (numer == 0)
+    Rational c(numer, denom);
+
+    cout << c.numer << "   " << c.denom <<  "    ";
+
+    if (c.numer == 0)
     {
         cout << "0" << endl;
 
     }
     else
     {
-    if (posNeg(numer) != posNeg (denom))
+    if (posNeg(c.numer) != posNeg (c.denom))
     {
         cout << "-";
     }
 
-    if (numer < denom)
+    if (c.numer < c.denom)
     {
-        cout << abs(numer) << "/" << abs(denom);
+        cout << abs(c.numer) << "/" << abs(c.denom);
     }
-    else if (numer >= denom)
+    else if (c.numer >= c.denom)
     {
-         long int q = numer / denom;
-         long int r = numer % denom;
+         long int q = c.numer / c.denom;
+         long int r = c.numer % c.denom;
          if (r == 0)
          {
          cout << q;
          }
          if (r > 0)
          {
-             if (posNeg(numer) != posNeg (denom))
+             if (posNeg(c.numer) != posNeg (c.denom))
              {
-                 cout << abs(q) << "-" << abs(r) << "/" << abs(denom);             
+                 cout << abs(q) << "-" << abs(r) << "/" << abs(c.denom);             
             }
             else
             {
-                cout << abs(q) << abs(r) << "/" << abs(denom);
+                cout << abs(q) << abs(r) << "/" << abs(c.denom);
             }
          }
     }
@@ -159,23 +162,3 @@ bool Rational::posNeg(const long int& a) const
     return false;
 }
 
-// Following the above, let N be the absolute value of the numerator and
-// D be the absolute value of the denominator.
-// If N < D then "N/D" should be printed after the sign (if there is
-// one).
-// If N ≥ D then the following printing procedure is applied.
-// Let Q = N / D and R = N % D.
-// If R = 0, simply print Q after the sign (if there is one).
-// If R > 0 then
-// print "Q+R/D" if a negative sign has NOT been printed
-// print "Q-R/D" if a negative sign has been printed
-// The output does NOT include a newline character.
-// Here are some example output.
-// Numerator Denominator Output
-// 0 1 0
-// 2 3 2/3
-// -2 3 -2/3
-// 3 2 1+1/2
-// -3 2 -1-1/2
-// 6 3 2
-// -6 3 -2

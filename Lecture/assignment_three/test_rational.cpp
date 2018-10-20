@@ -13,7 +13,7 @@ long int H()
     {
          for(i=1;i<=count;i++)
          {
-            answer = answer + (1.0/i);
+            answer = answer + (1.0/i);  //h.add()
          }
          
     }
@@ -25,15 +25,15 @@ int main(){
 
 
 Rational r1;
-Rational r2(1,3);
-Rational r3(13,-5);
-Rational r4(21, 36);
+Rational r2(1,21);
+Rational r3(2,7);
 
+r1 = r1.add(r2,r3);
 
-r1.print();
 r2.print();
 r3.print();
-r4.print();
+r1.print();
+
 
 return 0;
 }
