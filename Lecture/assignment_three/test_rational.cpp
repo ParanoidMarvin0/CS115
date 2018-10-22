@@ -14,7 +14,7 @@ void H(const long int h, Rational& a)
          {
             temp.getComponents(1,i); 
             a = a.add(a,temp);
-            a.print();
+            
          }
          
     }
@@ -31,14 +31,13 @@ void S(const long int s, Rational& a)
     for(i = 1; i<=s; i++)
          {
             temp.getComponents(i,i+1);
-            temp.print();
             if (i % 2 == 0){             
                 a = a.sub(a,temp);
-                a.print();
+                
             }
             else{
                a = a.add(a,temp);
-               a.print();
+               
             }
          }
          
@@ -48,12 +47,17 @@ void S(const long int s, Rational& a)
 
 int main(){
 
-Rational r1, r2;
+Rational r1, r2, r3, r4;
+H(10, r1);
+S(10, r2);
 r1.print();
 r2.print();
 
-H(10, r1);
-S(10, r2);
+r3 = r3.multi(r1, r2);
+r4 = r4.div(r1, r2);
+
+r3.print();
+r4.print();
 
 
 return 0;
