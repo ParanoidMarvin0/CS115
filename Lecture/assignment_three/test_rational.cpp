@@ -3,32 +3,30 @@
 
 using namespace std;
 
-void H(const int h, const Rational& a)
+void H(const int h, Rational& a)
 {
-    
-    
-    
+    Rational temp;
+
+   if (h != 0)
+   {   
     for(int i = 1; i<=h; i++)
          {
-            // answer = answer + (1.0/i);  //h.add()
-              // use array of rational class
-
+            temp.getComponents(1,i); 
+            a = a.add(a,temp);
+            a.print();
          }
          
     }
-
+    
+}
 
 int main(){
 
 Rational r1;
-Rational r2(3,4);
 
-r1.print();
-r2.print();
+H(10, r1);
 
-r2.getComponents(1,5);
 
-r2.print();
 
 return 0;
 }
