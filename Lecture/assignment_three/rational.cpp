@@ -147,7 +147,7 @@ void Rational::print() const
             }
             else
             {
-                cout << abs(q) << abs(r) << "/" << abs(c.denom);
+                cout << abs(q) << "+" << abs(r) << "/" << abs(c.denom);
             }
          }
     }
