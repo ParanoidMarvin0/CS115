@@ -9,16 +9,16 @@ using namespace std;
 Rational::Rational()
 {
     numer = 0;
-    denom = 0;
+    denom = 1;
 }
 
 Rational::Rational(long int a, long int b)
 {
     assert(b != 0);
     
-    numer = a;
-    denom = b;
-    getComponents(numer, denom);
+    // numer = a;
+    // denom = b;
+    getComponents(a, b);
 
 }
 
@@ -79,11 +79,14 @@ bool Rational::less(const Rational& a, const Rational& b) const
 
 }
 
-void Rational::getComponents(long int& a, long int& b)
+void Rational::getComponents(const long int& a, const long int& b)
 {
+    long int n, d;
     long int gCommon = gcd(a, b); 
-    a = a/gCommon;
-    b = b/gCommon;
+    n = a/gCommon;
+    d = b/gCommon;
+    numer = n;
+    denom = d;
 
 //put numerator and denominator in normal form;
 

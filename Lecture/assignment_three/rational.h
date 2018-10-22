@@ -8,18 +8,6 @@ class Rational
 private:
 long int numer, denom; //class values for numerator and denominator
 
-// getComponents
-//
-// Purpose: Convert Rational to normal form
-// Parameter(s): N/A
-// Precondition: N/A
-// Returns:
-// Side Effect: use gcd() to convert 
-//
-
-void getComponents(long int& a, long int& b);
-    
-
 //GCD
 //
 // Purpose: using Euclidean algorithym to calculate greatest common denominator
@@ -45,7 +33,7 @@ long int gcd(long int a, long int b);
 // Side Effect: 
 //
 
-    long int lcm(long int a, long int b);
+long int lcm(long int a, long int b);
    
 // posNeg
 //
@@ -60,6 +48,18 @@ long int gcd(long int a, long int b);
 bool posNeg(const long int& a) const;
 
     public:
+
+// getComponents
+//
+// Purpose: Convert Rational to normal form
+// Parameter(s): N/A
+// Precondition: N/A
+// Returns:
+// Side Effect: use gcd() to convert 
+//
+
+void getComponents(const long int& a, const long int& b);
+
 //Rational
 //
 // Purpose: Constructor

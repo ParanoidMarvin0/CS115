@@ -3,37 +3,32 @@
 
 using namespace std;
 
-long int H()
+void H(const int h, const Rational& a)
 {
-    int i;
-    int count = 10;
-    long int answer;
-    answer=0;
-    while(count != 0)
-    {
-         for(i=1;i<=count;i++)
+    
+    
+    
+    for(int i = 1; i<=h; i++)
          {
-            answer = answer + (1.0/i);  //h.add()
+            // answer = answer + (1.0/i);  //h.add()
+              // use array of rational class
+
          }
          
     }
-    
 
-}
 
 int main(){
 
-
 Rational r1;
-Rational r2(1,21);
-Rational r3(2,7);
+Rational r2(3,4);
 
-r1 = r1.add(r2,r3);
+r1.print();
+r2.print();
+
+r2.getComponents(1,5);
 
 r2.print();
-r3.print();
-r1.print();
-
 
 return 0;
 }
