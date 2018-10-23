@@ -59,7 +59,10 @@ Rational Rational::div(const Rational& a, const Rational& b) const
 
 bool Rational::equal(const Rational& a, const Rational& b) const
 {
-    if (a.numer == b.numer && a.denom == b.denom)
+    Rational c(a.numer,a.denom);
+    Rational d(b.numer,b.denom);
+
+    if (c.numer == d.numer && c.denom == d.denom)
     {
         return true;
     }
@@ -68,8 +71,15 @@ bool Rational::equal(const Rational& a, const Rational& b) const
 
 bool Rational::less(const Rational& a, const Rational& b) const
 {
-    float n1 = a.numer/a.denom;
-    float n2 = b.numer/b.denom;
+    double numer1 = a.numer;
+    double numer2 = b.numer;
+    double denom1 = a.denom;
+    double denom2 = b.denom;
+
+    double n1 = numer1/denom1;
+    double n2 = numer2/denom2;
+
+    cout << n1 << endl << n2 << endl;
 
     if (n1 < n2)
     {
@@ -89,8 +99,6 @@ void Rational::getComponents(const long int& a, const long int& b)
     denom = d;
 
 //put numerator and denominator in normal form;
-
-
 
 }
 
