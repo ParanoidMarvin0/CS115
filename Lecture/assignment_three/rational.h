@@ -161,7 +161,7 @@ bool less(const Rational& a, const Rational& b) const;
 
 // print
 //
-// Purpose: 
+// Purpose: Print normalized fractions
 // Parameter(s): N/A
 // Precondition: N/A
 // Returns: 

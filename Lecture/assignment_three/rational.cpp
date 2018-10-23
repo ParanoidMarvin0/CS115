@@ -1,3 +1,22 @@
+// |**********************************************************************;
+// * Project           : CSS 115 Assignment 3
+// *
+// * Program name      : rational.cpp
+// *
+// * Author            : Nolan Flegel
+// *
+// * SID               : 200250037
+// *
+// * Date created      : Oct 18, 2018
+// *
+// * 
+// *
+// |**********************************************************************;
+
+
+
+
+
 #include <iostream>
 #include <cassert>
 #include <cstdlib>

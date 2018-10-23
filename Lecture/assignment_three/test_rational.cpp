@@ -1,3 +1,21 @@
+// |**********************************************************************;
+// * Project           : CSS 115 Assignment 3
+// *
+// * Program name      : test_rational.cpp
+// *
+// * Author            : Nolan Flegel
+// *
+// * SID               : 200250037
+// *
+// * Date created      : Oct 18, 2018
+// *
+// * 
+// *
+// |**********************************************************************;
+
+
+
+
 #include <iostream>
 #include "rational.h"
 
@@ -88,7 +106,7 @@ Rational hN(301,100);
 
 H(10, r1);
 S(10, r2);
-cout << "Harmonic sum for H(10): ";
+cout << endl << "Harmonic sum for H(10): ";
 r1.print();
 cout << endl << endl << "Alternating sum S(10): ";
 r2.print();
