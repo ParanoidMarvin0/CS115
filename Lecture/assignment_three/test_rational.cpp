@@ -39,21 +39,25 @@ void S(const long int s, Rational& a)
                a = a.add(a,temp);
                
             }
+            
          }
          
     }
     
 }
 
-void testSN(const Rational& a)
+void findSN(const Rational& a)
 {
 Rational s;
-long int count = 1;
+long int count = 0;
 
 while(!a.equal(a,s))
 {
-    S(count, s);
+    s.getComponents(0,1);
     count++;
+    S(count, s);
+    a.print();
+    s.print();
 }
 cout << "testSN completed" << endl;
 a.print();
@@ -68,22 +72,25 @@ Rational r1, r2, r3, r4;
 Rational sN(533,840);
 Rational hN(301,100);
 
-cout << "testing function testSN" << endl;
-
-testSN(sN);
 
 
+H(10, r1);
+S(10, r2);
+cout << "Harmonic sum for H(10): ";
+r1.print();
+cout << "Alternating sum S(10): ";
+r2.print();
 
-// H(10, r1);
-// S(10, r2);
-// r1.print();
-// r2.print();
 
-// r3 = r3.multi(r1, r2);
-// r4 = r4.div(r1, r2);
+r3 = r3.multi(r1, r2);
+r4 = r4.div(r1, r2);
+cout << "Multiplication of H(10) x S(10): ";
+r3.print();
+cout << "Division of H(10) / S(10): ";
+r4.print();
 
-// r3.print();
-// r4.print();
+cout << "Find Positive integer for S(n) = 533/840" ;
+findSN(sN);
 
 
 return 0;
