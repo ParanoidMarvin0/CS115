@@ -79,8 +79,6 @@ bool Rational::less(const Rational& a, const Rational& b) const
     double n1 = numer1/denom1;
     double n2 = numer2/denom2;
 
-    cout << n1 << endl << n2 << endl;
-
     if (n1 < n2)
     {
         return true;
@@ -120,8 +118,6 @@ long int Rational::lcm(long int a, long int b)
 void Rational::print() const
 {
     Rational c(numer, denom);
-
-    cout << c.numer << "   " << c.denom <<  "    ";
 
     if (c.numer == 0)
     {
