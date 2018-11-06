@@ -21,7 +21,15 @@ for (int i = 0; i < size; i++)
 
 };
 
-Polynomial::Polynomial(Polynomial& p){};
+Polynomial::Polynomial(const Polynomial& p){
+
+assert(p.polyArr.size() != 0);
+
+for (int i = 0; i < p.polyArr.size(); i++)
+{
+    polyArr.insert(i, p.polyArr.read(i));
+}
+};
 
 void Polynomial::add(const Polynomial& p){};
 

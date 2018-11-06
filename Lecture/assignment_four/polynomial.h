@@ -37,7 +37,7 @@ Polynomial(const int a[], const int& size);
 // Returns: 
 // Side Effect: N/A
 
-Polynomial(Polynomial& p);
+Polynomial(const Polynomial& p);
 
 
 // evaluate
