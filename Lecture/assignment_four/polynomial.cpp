@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cassert>
+#include <cstdlib>
 #include "managed_array.h"
 #include "guarded_array.h"
 #include "polynomial.h"
@@ -68,9 +69,36 @@ for (int j = 0; j < p.polyArr.size(); j++)
     }
 };
 
-void Polynomial::multiply(const Polynomial& p){};
+void Polynomial::multiply(const Polynomial& p){
+int pMulti = 0;
 
-void Polynomial::multiply(const unsigned int a){};
+if (getDegree() < p.getDegree())
+{
+    for (int i = polyArr.size(); i < p.polyArr.size(); i++)
+    {
+        polyArr.insert(i, 0);
+    }
+}
+
+for (int j = 0; j < p.polyArr.size(); j++)
+    {   
+        pMulti = polyArr.read(j) * p.polyArr.read(j);
+
+        polyArr.write(j, pMulti);
+    }
+};
+
+void Polynomial::multiply(const unsigned int a){
+    int pMulti=0;
+
+    for (int j = 0; j < polyArr.size(); j++)
+    {   
+        pMulti = polyArr.read(j) * a;
+
+        polyArr.write(j, pMulti);
+    }
+
+};
 
 void Polynomial::raiseDegree(const unsigned int a){
     for (int i = 0; i < a; i++)
@@ -113,12 +141,21 @@ void Polynomial::print(){
     }
     else{ 
     if (polyArr.read(0)!=0){
-        cout << polyArr.read(0) << " ";
+        if(polyArr.read(0) > 0){
+        cout << "+ " << polyArr.read(0);
+        }
+        else
+            cout << "- " << abs(polyArr.read(0));
     }
     for (int i = 1; i < polyArr.size(); i++ )
     {
-        if (polyArr.read(i)!=0)
-            cout << polyArr.read(i) << "x^" << i << " ";
+        if (polyArr.read(i)!=0){
+            if(polyArr.read(i) > 0){
+            cout << " + " << polyArr.read(i) << " x^" << i;
+            }
+            else
+                cout << " - " << abs(polyArr.read(i)) << " x^" << i;
+        }
     }
 
     cout << endl << endl;

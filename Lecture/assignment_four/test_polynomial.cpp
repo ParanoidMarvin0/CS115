@@ -9,9 +9,9 @@ using namespace std;
 int main()
 {
  int p1[3] = {1, 1, 1};   //consider using sizeof()/sizeof() to calculate array length
- int p2[5] = {1, 2, 3, 4, 5};
- int p3[2] = {1, -2};
- int p4[5] = {0, 1, 5, 0, 2};
+ int p2[5] = {1, 2, -3, 4, 5};
+ int p3[2] = {2, -2};
+ int p4[5] = {3, 0, -3, 4, 5};
 
 
  Polynomial pTest(p1, 3);
@@ -26,15 +26,19 @@ cout << "Pzero" << endl;
 pZero.print();
 
 cout << "P1" << endl;
+pTest.multiply(pTest2);
 pTest.print();
 
-cout << "P2" << endl;
+cout << "P2*P4" << endl;
+pTest2.multiply(pTest4);
 pTest2.print();
 
-cout << "P3" << endl;
+cout << "P3*P4" << endl;
+pTest3.multiply(pTest4);
 pTest3.print();
 
-cout << "P4" << endl;
+cout << "P4*5" << endl;
+pTest4.multiply(5);
 pTest4.print();
 
 
