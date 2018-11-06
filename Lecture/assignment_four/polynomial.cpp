@@ -32,19 +32,44 @@ for (int i = 0; i < p.polyArr.size(); i++)
 };
 
 void Polynomial::add(const Polynomial& p){
+int pAdd = 0;
 
-if (getDegree < p.getDegree)
+if (getDegree() < p.getDegree())
 {
     for (int i = polyArr.size(); i < p.polyArr.size(); i++)
     {
-        polyArr.insert(i, p.polyArr.read(i));
+        polyArr.insert(i, 0);
     }
 }
+
+for (int j = 0; j < p.polyArr.size(); j++)
+    {   
+        pAdd = polyArr.read(j) + p.polyArr.read(j);
+
+        polyArr.write(j, pAdd);
+    }
 
     
 };
 
-void Polynomial::subtract(const Polynomial& p){};
+void Polynomial::subtract(const Polynomial& p){
+  int pSub = 0;
+
+if (getDegree() < p.getDegree())
+{
+    for (int i = polyArr.size(); i < p.polyArr.size(); i++)
+    {
+        polyArr.insert(i, 0);
+    }
+}
+
+for (int j = 0; j < p.polyArr.size(); j++)
+    {   
+        pSub = polyArr.read(j) - p.polyArr.read(j);
+
+        polyArr.write(j, pSub);
+    }
+};
 
 void Polynomial::multiply(const Polynomial& p){};
 
