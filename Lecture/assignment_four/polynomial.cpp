@@ -6,10 +6,7 @@
 
 using namespace std;
 
-Polynomial::Polynomial(){
-
-polyArr.insert(0,0);
-};
+Polynomial::Polynomial(){};
 
 Polynomial::Polynomial(const int a[], const int& size){
 assert(a[size-1] != 0);
@@ -75,9 +72,25 @@ void Polynomial::multiply(const Polynomial& p){};
 
 void Polynomial::multiply(const unsigned int a){};
 
-void Polynomial::raiseDegree(const unsigned int a){};
+void Polynomial::raiseDegree(const unsigned int a){
+    for (int i = 0; i < a; i++)
+    {
+        polyArr.insert(i,0);
+    }
+};
 
-bool Polynomial::equal(const Polynomial& p) const{};
+bool Polynomial::equal(const Polynomial& p) const{
+    
+    if (polyArr.size() != p.polyArr.size())
+        {return false;}
+
+    for (int i=0; i<polyArr.size(); i++)
+    {
+        if (polyArr.read(i) != p.polyArr.read(i))
+            {return false;}
+    }
+    return true;
+};
 
 int Polynomial::getDegree() const{
     
@@ -94,14 +107,21 @@ int Polynomial::getCoefficient(const unsigned int k) const{
 
 void Polynomial::print(){
 
-    cout << "The polynomial is size: " << polyArr.size() << endl;
-
-    for (int i = 0; i < polyArr.size(); i++ )
+    if (polyArr.size()==0)
     {
-        cout << polyArr.read(i) << " ";
-        }
+    cout << "0" << endl;
+    }
+    else{ 
+    if (polyArr.read(0)!=0){
+        cout << polyArr.read(0) << " ";
+    }
+    for (int i = 1; i < polyArr.size(); i++ )
+    {
+        if (polyArr.read(i)!=0)
+            cout << polyArr.read(i) << "x^" << i << " ";
+    }
 
     cout << endl << endl;
-
+    }
 };
 
