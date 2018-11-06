@@ -54,6 +54,9 @@ void Polynomial::print(){
     for (int i = 0; i < polyArr.size(); i++ )
     {
         cout << polyArr.read(i) << " ";
-    }
+        }
+
+    cout << endl << endl;
+
 };
 
