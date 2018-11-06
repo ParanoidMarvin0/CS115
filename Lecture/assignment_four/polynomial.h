@@ -107,9 +107,6 @@ void multiply(const unsigned int a);
 // Precondition: N/A
 // Returns: None
 // Side Effect: Current instance of Polynomial is raised to an exponential degree
-//
-//
-
 void raiseDegree(const unsigned int a);
 
 // equal 
@@ -120,19 +117,16 @@ void raiseDegree(const unsigned int a);
 // Precondition: N/A
 // Returns: True if polynomials are equal or False if they are not equal
 // Side Effect: None
-
 bool equal(const Polynomial& p) const;
 
 // getDegree
 //
-// Purpose: Return degree(exponent) of polynomial 
+// Purpose: Return degree of polynomial instance
 // Parameter(s): N/A
 // Precondition: N/A
 // Returns: integer value representing polynomial exponential degree
 // Side Effect: N/A
-//
-
-int getDegree();
+int getDegree() const;
 
 // getCoefficient 
 //
@@ -141,20 +135,18 @@ int getDegree();
 // Precondition: N/A
 // Returns: integer value representing coefficient
 // Side Effect: None
-//
-
-int getCoefficient();
+int getCoefficient(const unsigned int k) const;
 
 // Print 
 //
 // Purpose: Print out polynomial in normalized form
-// Parameter(s): N/A
-// Precondition: N/A
-// Returns: None
-// Side Effect: N/A
-//
-
+// Parameter(s): 
+//<1> k: non negative term representing x^k
+// Precondition: k > 0
+// Returns: integer value at location k in managed array
+// Side Effect: None
 void print();
+
 private:
 
 ManagedArray polyArr;

@@ -31,7 +31,18 @@ for (int i = 0; i < p.polyArr.size(); i++)
 }
 };
 
-void Polynomial::add(const Polynomial& p){};
+void Polynomial::add(const Polynomial& p){
+
+if (getDegree < p.getDegree)
+{
+    for (int i = polyArr.size(); i < p.polyArr.size(); i++)
+    {
+        polyArr.insert(i, p.polyArr.read(i));
+    }
+}
+
+    
+};
 
 void Polynomial::subtract(const Polynomial& p){};
 
@@ -43,9 +54,18 @@ void Polynomial::raiseDegree(const unsigned int a){};
 
 bool Polynomial::equal(const Polynomial& p) const{};
 
-int Polynomial::getDegree(){};
+int Polynomial::getDegree() const{
+    
+    return polyArr.size() - 1;
 
-int Polynomial::getCoefficient(){};
+};
+
+int Polynomial::getCoefficient(const unsigned int k) const{
+    assert(k > 0);
+
+    return polyArr.read(k+1);
+
+};
 
 void Polynomial::print(){
 
