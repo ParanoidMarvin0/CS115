@@ -51,7 +51,7 @@ Polynomial(Polynomial& p);
 // Side Effect: None
 //
 
-void evaluate(const int x) const; 
+void evaluate(const unsigned int x) const; 
 
 // add
 //
@@ -157,7 +157,7 @@ int getCoefficient();
 void print();
 private:
 
-ManagedArray manArray;
+ManagedArray polyArray;
 
 };
 

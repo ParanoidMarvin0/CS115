@@ -9,7 +9,7 @@ using namespace std;
 Polynomial::Polynomial(){
 
 
-    ManagedArray polynomial(0);
+    
 
 };
 
@@ -37,9 +37,9 @@ void Polynomial::print(){
 
     cout << "The polynomial is: " ;
 
-    for (int i = 0; i > polynomial.length(); i++ )
+    for (int i = 0; i > 1; i++ )
     {
-        cout << polynomial.retrieve(i) << " ";
+        cout << i;
     }
 };
 
