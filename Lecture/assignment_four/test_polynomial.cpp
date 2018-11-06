@@ -9,9 +9,11 @@ using namespace std;
 int main()
 {
 int p[] = {1, 1, 1};
+int size = 3;
 
+Polynomial pTest(p, size);
 
-
+pTest.print();
 
 
     return 0;

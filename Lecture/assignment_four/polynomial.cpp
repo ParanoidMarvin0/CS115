@@ -8,12 +8,18 @@ using namespace std;
 
 Polynomial::Polynomial(){
 
-
-    
-
+polyArr.insert(0,0);
 };
 
-Polynomial::Polynomial(const int& a, const int& size){};
+Polynomial::Polynomial(const int a[], const int& size){
+assert(a[size-1] != 0);
+
+for (int i = 0; i < size; i++)
+{
+    polyArr.insert(i, a[i]);
+}
+
+};
 
 Polynomial::Polynomial(Polynomial& p){};
 
@@ -35,11 +41,11 @@ int Polynomial::getCoefficient(){};
 
 void Polynomial::print(){
 
-    cout << "The polynomial is: " ;
+    cout << "The polynomial is size: " << polyArr.size() << endl;
 
-    for (int i = 0; i > 1; i++ )
+    for (int i = 0; i < polyArr.size(); i++ )
     {
-        cout << i;
+        cout << polyArr.read(i) << " ";
     }
 };
 

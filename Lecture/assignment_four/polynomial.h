@@ -28,7 +28,7 @@ Polynomial();
 // Precondition: N/A
 // Returns: 
 // Side Effect: N/A
-Polynomial(const int& a, const int& size);
+Polynomial(const int a[], const int& size);
 // Constructor
 //
 // Purpose: 
@@ -157,7 +157,7 @@ int getCoefficient();
 void print();
 private:
 
-ManagedArray polyArray;
+ManagedArray polyArr;
 
 };
 
