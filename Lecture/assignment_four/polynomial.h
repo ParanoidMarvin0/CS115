@@ -51,7 +51,7 @@ Polynomial(const Polynomial& p);
 // Side Effect: None
 //
 
-void evaluate(const unsigned int x) const; 
+long int evaluate(const int x) const; 
 
 // add
 //

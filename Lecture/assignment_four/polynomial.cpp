@@ -29,6 +29,23 @@ for (int i = 0; i < p.polyArr.size(); i++)
 }
 };
 
+long int Polynomial::evaluate(const int x) const{
+long int polyValue = 0;
+long int temp=0;
+
+for (int i=0; i < polyArr.size(); i++)
+{   
+    temp = polyArr.read(i);
+    for (int j = 0; j < i; j++)
+    {
+        temp = temp * polyArr.read(i);
+    }
+    polyValue += temp;
+}
+
+return polyValue;
+};
+
 void Polynomial::add(const Polynomial& p){
 int pAdd = 0;
 
