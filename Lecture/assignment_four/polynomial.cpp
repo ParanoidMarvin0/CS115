@@ -138,6 +138,8 @@ bool Polynomial::equal(const Polynomial& p) const{
 };
 
 int Polynomial::getDegree() const{
+    if (polyArr.size()==0)
+    {return 0;}
     
     return polyArr.size() - 1;
 

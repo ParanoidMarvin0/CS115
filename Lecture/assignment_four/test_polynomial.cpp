@@ -12,17 +12,8 @@ Polynomial zero;
 
 cout << "The zero polynomial value is: ";
 zero.print();
-cout << "The degree of the zero polynomial is: " << zero.getDegree();
+cout << "The degree of the zero polynomial is: " << zero.getDegree() << endl;
 
-int a1[3] = {1,1,1};
-int a2[5] = {0,2,3};
-
-Polynomial p1(a1,3);
-Polynomial p2(a2,5);
-
-p1.evaluate(2);
-cout << "testing evaluate P1: ";
-p1.print();
 
 
     return 0;
