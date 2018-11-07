@@ -30,20 +30,27 @@ for (int i = 0; i < p.polyArr.size(); i++)
 };
 
 long int Polynomial::evaluate(const int x) const{
-long int polyValue = 0;
-long int temp=0;
+    if (polyArr.size()==0)
+    {return 0;}
 
-for (int i=0; i < polyArr.size(); i++)
-{   
-    temp = polyArr.read(i);
-    for (int j = 0; j < i; j++)
+    long int polyValue = polyArr.read(0);
+    long int temp=0;
+    long int exp=x;
+
+    for (int i=1; i < polyArr.size(); i++)
     {
-        temp = temp * polyArr.read(i);
+        exp = x;
+        for (int j = 1; j < i; j++)
+            {
+                exp = exp * x;
+            }
+        temp = polyArr.read(i);
+        polyValue = polyValue + temp*exp;
+        
     }
-    polyValue += temp;
-}
+    
 
-return polyValue;
+    return polyValue;
 };
 
 void Polynomial::add(const Polynomial& p){
@@ -140,7 +147,7 @@ bool Polynomial::equal(const Polynomial& p) const{
 int Polynomial::getDegree() const{
     if (polyArr.size()==0)
     {return 0;}
-    
+
     return polyArr.size() - 1;
 
 };
@@ -177,7 +184,7 @@ void Polynomial::print(){
         }
     }
 
-    cout << endl << endl;
+    cout << endl;
     }
 };
 
