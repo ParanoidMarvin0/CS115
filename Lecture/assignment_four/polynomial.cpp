@@ -184,7 +184,7 @@ void Polynomial::print(){
         }
     }
 
-    cout << endl;
+    cout << endl << endl;
     }
 };
 

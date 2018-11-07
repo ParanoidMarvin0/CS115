@@ -14,28 +14,32 @@ class Polynomial{
 public:
 // Constructor
 //
-// Purpose: 
+// Purpose: default constructor
 // Parameter(s): N/A
 // Precondition: N/A
-// Returns: 
-// Side Effect: N/A
+// Returns: N/A
+// Side Effect: set zero instance of polynomial
 Polynomial();
 
 // Constructor
 //
-// Purpose: 
-// Parameter(s): N/A
-// Precondition: N/A
-// Returns: 
-// Side Effect: N/A
+// Purpose: Contruct instance of polynomial with 2 parameters
+// Parameter(s):
+// <1> a: integer array representing a polynomial
+// <2> size: the size of the array  
+// Precondition: value of parameter size is true size of array
+// Returns: none
+// Side Effect: init polynomial instance with passed array
+
 Polynomial(const int a[], const int& size);
 // Constructor
 //
-// Purpose: 
-// Parameter(s): N/A
+// Purpose: create instance of polynomial using another instance of polynomial 
+// Parameter(s): 
+//<1> p: an initialized instance of polynomial
 // Precondition: N/A
-// Returns: 
-// Side Effect: N/A
+// Returns: None
+// Side Effect: a new instance of polynomial 
 
 Polynomial(const Polynomial& p);
 
