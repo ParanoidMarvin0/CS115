@@ -16,16 +16,17 @@
 #include <iostream>
 #include <cassert>
 
-#include <queue.h>
-#include <process.h>
-
 using namespace std;
+
+#include "queue.h"
+#include "process.h"
 
 int main()
 {
+Queue c;
+
+process_sequence(c);
 
 
-
-
-    return 0;
+return 0;
 }

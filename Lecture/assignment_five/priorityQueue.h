@@ -1,7 +1,7 @@
 #ifndef __PRIORITYQUEUE_H__
 #define __PRIORITYQUEUE_H__
-#include <managed_array.h>
-#include <container.h>
+#include "managed_array.h"
+#include "container.h"
 
 // PriorityQueue
 //

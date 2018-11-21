@@ -1,7 +1,8 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
-#include <managed_array.h>
-#include <container.h>
+#include "managed_array.h"
+#include "container.h"
+// #include "process.h"
 
 // Queue
 //
@@ -61,13 +62,13 @@ int remove();
 // Returns: true if array is empty
 // Side Effect: none
 
-bool empty();
+bool empty() const;
 
 
     protected:
     private:
     ManagedArray queueArr;
-}
+};
 
 
 #endif

@@ -1,7 +1,7 @@
 #include<iostream>
 #include <cassert>
 
-#include <queue.h>
+#include "queue.h"
 
 using namespace std;
 
@@ -11,7 +11,7 @@ Queue::Queue(){
 
 void Queue::insert(int x){
 
-queueArr.write(queueArr.size(), x);
+queueArr.insert(queueArr.size(), x);
 
 };
 
@@ -22,7 +22,7 @@ queueArr.remove(0);
 return x;
 };
 
-bool Queue::empty(){
+bool Queue::empty() const{
 
 if (queueArr.size() == 0)
 return true;
