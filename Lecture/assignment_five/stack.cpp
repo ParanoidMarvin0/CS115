@@ -5,26 +5,26 @@
 
 using namespace std;
 
-Queue::Queue(){
+Stack::Stack(){
 
 };
 
-void Queue::insert(int x){
+void Stack::insert(int x){
 
-queueArr.insert(queueArr.size(), x);
+stackArr.insert(stackArr.size(), x);
 
 };
 
-int Queue::remove(){
-int x = queueArr.read(0);
-queueArr.remove(0);
+int Stack::remove(){
+int x = stackArr.read(stackArr.size()-1);
+stackArr.remove(stackArr.size()-1);
 
 return x;
 };
 
-bool Queue::empty() const{
+bool Stack::empty() const{
 
-if (queueArr.size() == 0)
+if (stackArr.size() == 0)
 return true;
 
 };

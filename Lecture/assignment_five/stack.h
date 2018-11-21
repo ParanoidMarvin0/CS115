@@ -11,27 +11,25 @@
 // Returns: 
 // Side Effect:
 
-class Queue : public Container {
+class Stack : public Container {
 
     public:
-// Queue
+// stack
 //
 // Purpose: Default Contructor
 // Parameter(s): N/A 
 // Precondition: N/A
 // Returns: 
 // Side Effect: none
-Queue();
+Stack();
 
-// Queue
+// stack
 //
 // Purpose:  
 // Parameter(s): N/A 
 // Precondition: N/A
 // Returns: 
 // Side Effect:
-
-//Queue();
 
 // insert
 //
@@ -45,7 +43,7 @@ void insert(int x);
 
 // remove
 //
-// Purpose: retrieve item from front of container array
+// Purpose: retrieve item from back of container array
 // Parameter(s): N/A 
 // Precondition: N/A
 // Returns: 
@@ -66,7 +64,7 @@ bool empty() const;
 
     protected:
     private:
-    ManagedArray queueArr;
+    ManagedArray stackArr;
 };
 
 
