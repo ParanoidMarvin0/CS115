@@ -27,6 +27,5 @@ Stack s;
 
 process_sequence(s);
 
-
 return 0;
 }
