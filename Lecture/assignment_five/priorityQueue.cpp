@@ -11,8 +11,6 @@ priorityQueue::priorityQueue(){
 
 void priorityQueue::insert(int x){
 bool valueIn = false;
-// if (pQArr.size()==0)
-// {pQArr.insert(pQArr.size(),x);}
 
 for (unsigned int i = 0; i < pQArr.size(); i++)
 {
