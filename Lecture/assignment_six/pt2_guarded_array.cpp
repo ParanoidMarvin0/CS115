@@ -1,5 +1,5 @@
 #include <cassert>
-#include "pt1_guarded_array.h"
+#include "pt2_guarded_array.h"
 
 GuardedArray::GuardedArray() {
   // for (unsigned i = 0; i < arrayCap; i++)

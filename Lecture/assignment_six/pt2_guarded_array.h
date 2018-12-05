@@ -1,5 +1,5 @@
-#ifndef __PT1_GUARDED_ARRAY_H__
-#define __PT1_GUARDED_ARRAY_H__
+#ifndef __PT2_GUARDED_ARRAY_H__
+#define __PT2_GUARDED_ARRAY_H__
 
 typedef int ItemType;
 

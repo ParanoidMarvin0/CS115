@@ -1,6 +1,6 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
-#include "pt1_managed_array.h"
+#include "pt2_managed_array.h"
 #include "container.h"
 // #include "process.h"
 

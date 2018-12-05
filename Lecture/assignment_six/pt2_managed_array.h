@@ -1,7 +1,7 @@
-#ifndef __PT1_MANAGED_ARRAY_H__
-#define __PT1_MANAGED_ARRAY_H__
+#ifndef __PT2_MANAGED_ARRAY_H__
+#define __PT2_MANAGED_ARRAY_H__
 
-#include "pt1_guarded_array.h"
+#include "pt2_guarded_array.h"
 
 //
 // ManagedArray
@@ -125,7 +125,7 @@ public:
 
 private:
 
-  unsigned count;
+  unsigned aSize;
   GuardedArray array;
 
 };
