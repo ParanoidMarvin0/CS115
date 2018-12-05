@@ -1,7 +1,7 @@
 #ifndef __PT1_MANAGED_ARRAY_H__
 #define __PT1_MANAGED_ARRAY_H__
 
-#include "guarded_array.h"
+#include "pt1_guarded_array.h"
 
 //
 // ManagedArray

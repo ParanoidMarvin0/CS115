@@ -5,7 +5,7 @@ GuardedArray::GuardedArray() {
   // for (unsigned i = 0; i < arrayCap; i++)
   //   ptrArray[i] = 0;
 
-  ptrArray = NULL;
+  ptrArray = nullptr;
   arrayCap = 0;
 
 }
@@ -48,6 +48,10 @@ ItemType GuardedArray::read(unsigned i) const {
 void GuardedArray::write(unsigned i, ItemType x) {
   assert(i < arrayCap);
   ptrArray[i] = x;
+}
+
+int GuardedArray::size(){
+  return arrayCap;
 }
 
 GuardedArray::~GuardedArray(){

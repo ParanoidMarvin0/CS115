@@ -72,7 +72,7 @@ public:
   //Preconditions: none
   //Return: *this
   
-  GuardedArray& GuardedArray::operator=(const GuardedArray& a);
+  GuardedArray& operator=(const GuardedArray& a);
   
   
   //
@@ -101,6 +101,18 @@ public:
   //
 
   void write(unsigned i, ItemType x);
+
+  //
+  // size
+  //
+  // Purpose: return size of array
+  // Argument(s):none
+  // Precondition(s):
+  // Side Effect: none
+  // Return: N/A
+  //
+
+  int size();
 
   //
   // Deconstructor
