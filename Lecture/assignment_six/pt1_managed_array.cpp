@@ -1,5 +1,5 @@
 #include <cassert>
-#include "managed_array.h"
+#include "pt1_managed_array.h"
 
 ManagedArray::ManagedArray() : array() {
   count = 0;

@@ -1,5 +1,5 @@
 #include <cassert>
-#include "guarded_array.h"
+#include "pt1_guarded_array.h"
 
 GuardedArray::GuardedArray() {
   // for (unsigned i = 0; i < arrayCap; i++)
@@ -12,7 +12,9 @@ GuardedArray::GuardedArray() {
 
 GuardedArray::GuardedArray(const int s){
   arrayCap=s;
-  for (unsigned i = 0; i < arrayCap; i++)
+  ptrArray = new int[arrayCap];
+  
+for (unsigned i = 0; i < arrayCap; i++)
     ptrArray[i] = 0;
 }
 
@@ -23,7 +25,19 @@ GuardedArray::GuardedArray(const int s, ItemType x) {
 }
 
 GuardedArray::GuardedArray(const GuardedArray& a){  //copy constructor
+  arrayCap = a.arrayCap;
+  ptrArray = a.ptrArray;
 
+}
+GuardedArray& GuardedArray::operator=(const GuardedArray& a)
+{
+ arrayCap = a.arrayCap;
+ int* cpyArray = new int[arrayCap];
+ GuardedArray temp(a);
+ cpyArray = temp.ptrArray;
+ delete [] ptrArray;
+ ptrArray = cpyArray;
+ return *this;
 }
 
 ItemType GuardedArray::read(unsigned i) const {

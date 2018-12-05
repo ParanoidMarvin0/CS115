@@ -1,5 +1,5 @@
-#ifndef __GUARDED_ARRAY_H__
-#define __GUARDED_ARRAY_H__
+#ifndef __PT1_GUARDED_ARRAY_H__
+#define __PT1_GUARDED_ARRAY_H__
 
 typedef int ItemType;
 
@@ -63,6 +63,18 @@ public:
 
   GuardedArray(const GuardedArray& a);
 
+  //
+  //Assignment Operator Overload
+  //
+  //Purpose: allow direct assignment of array
+  //Arguements: 
+  //<a> : array to be copied
+  //Preconditions: none
+  //Return: *this
+  
+  GuardedArray& GuardedArray::operator=(const GuardedArray& a);
+  
+  
   //
   // read
   //

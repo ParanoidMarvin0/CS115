@@ -1,5 +1,5 @@
-#ifndef __MANAGED_ARRAY_H__
-#define __MANAGED_ARRAY_H__
+#ifndef __PT1_MANAGED_ARRAY_H__
+#define __PT1_MANAGED_ARRAY_H__
 
 #include "guarded_array.h"
 
