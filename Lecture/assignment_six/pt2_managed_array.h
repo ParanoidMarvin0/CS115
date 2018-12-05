@@ -56,13 +56,37 @@ public:
   ManagedArray(unsigned N, ItemType x);
 
   //
+  //Copy Constructor
+  //
+  // Purpose: initialize instance using another instance
+  // Argument(s):
+  //  a : an instance of managedarray that will be copied to new array
+  // Side Effect: new instance initialized with all elements equal to passed instance.
+  // Return: N/A
+  //
+
+  ManagedArray(const GuardedArray& a);
+
+   //
+  //Assignment Operator Overload
+  //
+  //Purpose: allow direct assignment of array
+  //Arguements: 
+  //<a> : array to be copied
+  //Preconditions: none
+  //Return: *this
+  
+  ManagedArray& operator=(const GuardedArray& a);
+  
+
+  //
   // size
   //
   // Purpose: Return the current size of the array.
   // Argument(s): N/A
   // Return: current size of the array
   //
-
+  
   unsigned size() const;
 
   //
@@ -122,6 +146,17 @@ public:
   //
 
   void remove(unsigned i);
+
+  //
+  // Deconstructor
+  //
+  // Purpose: Deallocate memory for GuardedArray
+  // Arguements: none
+  // Preconditions: none
+  // Side Effect: memory deallocated
+  // Return: none
+
+  ~ManagedArray();
 
 private:
 

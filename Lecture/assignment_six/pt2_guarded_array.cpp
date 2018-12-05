@@ -20,6 +20,7 @@ for (unsigned i = 0; i < arrayCap; i++)
 
 GuardedArray::GuardedArray(const int s, ItemType x) {
   arrayCap=s;
+  ptrArray = new int[arrayCap];
   for (unsigned i = 0; i < arrayCap; i++)
     ptrArray[i] = x;
 }
