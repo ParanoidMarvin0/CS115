@@ -65,7 +65,7 @@ public:
   // Return: N/A
   //
 
-  ManagedArray(const GuardedArray& a);
+  ManagedArray(const ManagedArray& a);
 
    //
   //Assignment Operator Overload
@@ -76,7 +76,7 @@ public:
   //Preconditions: none
   //Return: *this
   
-  ManagedArray& operator=(const GuardedArray& a);
+  ManagedArray& operator=(const ManagedArray& a);
   
 
   //

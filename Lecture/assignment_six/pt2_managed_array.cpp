@@ -15,15 +15,15 @@ ManagedArray::ManagedArray(unsigned N, ItemType x) : array(N,x) {
   aSize = N;
 }
 
-// ManagedArray::ManagedArray(const ManagedArray& a) : array() {
-// aSize=a.aSize;
-// }
+ManagedArray::ManagedArray(const ManagedArray& a) : array() {
+aSize=a.aSize;
+}
 
-// ManagedArray& ManagedArray::operator=(const ManagedArray& a) {
-// ManagedArray temp = a;
-// temp.aSize = aSize;
-// return *this;
-// }
+ManagedArray& ManagedArray::operator=(const ManagedArray& a) {
+ManagedArray temp = a;
+temp.aSize = aSize;
+return *this;
+}
 unsigned ManagedArray::size() const {
   return aSize;
 }
@@ -39,12 +39,14 @@ void ManagedArray::write(unsigned i, ItemType x) {
 }
 
 void ManagedArray::insert(unsigned i, ItemType x) {
-  assert(i <= aSize);
-  if (aSize >= array.size()){
-    GuardedArray newArray(aSize+1);
-    
-  }
   
+  if (aSize >= array.size()){
+    GuardedArray newArray(aSize*2);
+    for (unsigned s = 0; s < aSize; s++)
+    newArray.write(s, array.read(s));
+    array = newArray;    
+  }
+  assert(i <= aSize);
   for (unsigned j = aSize; j > i; j--)
     array.write(j, array.read(j-1));
   array.write(i, x);
